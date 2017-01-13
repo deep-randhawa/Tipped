@@ -14,12 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var tipTotalView: UIView!
+    @IBOutlet weak var billSegmentView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         billField.becomeFirstResponder();
+        tipTotalView.frame.origin.y = CGFloat(1000)
+        billSegmentView.frame.origin.y = CGFloat(180)
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,6 +38,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateTip(_ sender: AnyObject) {
+        if (billField.text == "") {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.tipTotalView.frame.origin.y = CGFloat(1000)
+                self.billSegmentView.frame.origin.y = CGFloat(180)
+            })
+        } else {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.tipTotalView.frame.origin.y = CGFloat(272)
+                self.billSegmentView.frame.origin.y = CGFloat(65)
+            })
+        }
         let tipPercentages = [0.18, 0.20, 0.25]
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipSegmentedControl.selectedSegmentIndex]

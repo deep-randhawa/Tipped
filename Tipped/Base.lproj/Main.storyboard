@@ -19,7 +19,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" id="pCB-LC-ZDv">
                                 <rect key="frame" x="0.0" y="272" width="375" height="395"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a5H-Wi-vud">
                                         <rect key="frame" x="8" y="84" width="359" height="65"/>
@@ -78,8 +78,10 @@
                     <navigationItem key="navigationItem" title="Tipped" id="T3a-ny-S31"/>
                     <connections>
                         <outlet property="billField" destination="azE-B6-AyW" id="xu7-6K-26S"/>
+                        <outlet property="billSegmentView" destination="TSF-5i-X0x" id="Iy5-zf-vj7"/>
                         <outlet property="tipLabel" destination="F1a-2x-Fjb" id="Fo8-P2-bKE"/>
                         <outlet property="tipSegmentedControl" destination="WRX-Xt-gVw" id="aZh-4J-CBk"/>
+                        <outlet property="tipTotalView" destination="pCB-LC-ZDv" id="JN7-Br-qMX"/>
                         <outlet property="totalLabel" destination="a5H-Wi-vud" id="sK5-MZ-l5o"/>
                     </connections>
                 </viewController>
