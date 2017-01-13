@@ -34,13 +34,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func onTap(_ sender: Any) {
-        view.endEditing(true)
+        // view.endEditing(true)
     }
     
     @IBAction func calculateTip(_ sender: AnyObject) {
         if (billField.text == "") {
             UIView.animate(withDuration: 0.5, animations: {
-                self.tipTotalView.frame.origin.y = CGFloat(1000)
+                self.tipTotalView.frame.origin.y = CGFloat(500)
                 self.billSegmentView.frame.origin.y = CGFloat(180)
             })
         } else {
